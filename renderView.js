@@ -79,7 +79,7 @@ export function render ( criteria ) {
             } else if ( !isCtrl && parent.dataset.active != "false" ) {
 
                 // Add subtask count
-                if ( task.status == undefined ) checkDone();
+                if ( task.status === undefined ) checkDone();
 
                 // Calculate actual Total Score
                 const scores = [0, +( task.max / 2 ).toFixed( 1 ), task.max];
@@ -164,7 +164,7 @@ export function render ( criteria ) {
     }
 
     function getFeedback ( filteredCriteria ) {
-        info.innerHTML = '<div class="copy"><a href="#" onclick="copyToClipboard(event);">Скопировать в буфер</a></div>';
+        info.innerHTML = '';
         const conrgats = "<img class='congrats' src='images/congrats.png' width='150' height='150' alt='Congratulations'>";
         const ups = "<img class='sorry' src='images/sorry.png' width='150' height='150' alt='We are sorry'>";
         const header = document.createElement( 'div' );
@@ -182,9 +182,9 @@ export function render ( criteria ) {
         } );
         header.appendChild( close );
         if ( totalTasks !== done ) {
-            content.innerHTML += '<p>Вы проверили не все пункты задания</p>';
+            content.innerHTML += `<div style="display: flex; height: 100%; justify-content: center; flex-direction: column; text-align: center"><div>Вы проверили не все пункты задания</div><div>Осталось ${ totalTasks - done } из ${ totalTasks }</div></div>`;
         } else {
-            console.log(filteredCriteria)
+            info.innerHTML = '<div class="copy"><a href="#" onclick="copyToClipboard(event);">Скопировать в буфер</a></div>';
             let resultList = filteredCriteria.filter( item => item && item.status != undefined );
             let points = total % 10 > 1 && total % 10 <= 4 ? "балла" : "баллов";
             content.innerHTML += `<p><strong>Ваша оценка - ${total >= 0 ? total : 0} ${points}</strong> \r\n</p><p>Отзыв по пунктам ТЗ:\r\n</p>`;

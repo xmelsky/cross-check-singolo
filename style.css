@@ -140,10 +140,6 @@ label {
 
 }
 
-label span {
-
-}
-
 .checkbox-container {
     transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
@@ -152,12 +148,6 @@ label span {
     -o-transition: all .3s ease-in;
     padding-left: 10px;
 }
-
-
-/* .checkbox-container:not([data-active="false"]):hover {
-    background: rgb(240, 237, 237);
-    color: #333;
-} */
 
 .checkbox-container[data-active="false"] label,
 .checkbox-container[data-active="inactive"] label {
@@ -268,6 +258,7 @@ main {
     background: #fff;
     opacity: 1;
     z-index: 1000;
+    min-width: 300px;
 }
 
 .info p {
@@ -364,122 +355,20 @@ main {
     position: relative;
     width: 30%;
 }
-/* .checkbox-container label:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: calc(50% - 11px);
-    width: 25px;
-    height: 25px;
-    box-sizing: border-box;
-    transition: transform 0.28s ease;
-    border-radius: 3px;
-    border: 2px solid #444;
-}
-
-.checkbox-container label:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 10px;
-    height: 5px;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-}
-.checkbox-container label.green:after {
-    border-bottom: 2px solid #7bbe72;
-    border-left: 2px solid #7bbe72;
-    transform: rotate(-45deg) scale(2.2);
-    -webkit-transform: rotate(-45deg) scale(2.2);
-    transition: transform ease 0.25s;
-    will-change: transform;
-    position: absolute;
-    bottom: calc(50% - -7px);
-    right: 4px;
-    -moz-transform: rotate(-45deg) scale(2.2);
-    -ms-transform: rotate(-45deg) scale(2.2);
-    -o-transform: rotate(-45deg) scale(2.2);
-}
-
-.checkbox-container label.red:after {
-    color: #d40404;
-    content: "X";
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 0px;
-    transition: transform ease 0.25s;
-    will-change: transform;
-    position: absolute;
-    right: 5px;
-    bottom: calc(50% - 7px);
-    transform: scale(2.2);
-    -webkit-transform: scale(2.2);
-    -moz-transform: scale(2.2);
-    -ms-transform: scale(2.2);
-    -o-transform: scale(2.2);
-}
-
-.checkbox-container label.yellow:after {
-    color: #d4ae04;
-    content: "?";
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 9px;
-    will-change: transform;
-    position: absolute;
-    bottom: calc(50% - -7px);
-    right: 4px;
-    transform: rotate(0) scale(2.2);
-    -moz-transform: rotate(0) scale(2.2);
-    -ms-transform: rotate(0) scale(2.2);
-    -o-transform: rotate(0) scale(2.2);
-    -webkit-transform: rotate(0) scale(2.2);
-} */
-
-
-/* .checkbox-container label.green::before {
-    border-color: #7bbe72;
-}
-
-.checkbox-container label.red::before {
-    border-color: #d40404;
-}
-
-.checkbox-container label.yellow::before {
-    border-color: #d4ae04;
-}
-
-.checkbox-container input[type="checkbox"]:focus + label::before {
-    outline: 0;
-} */
-
 .progress {
     display: inline-block;
     padding: 0 15px;
 }
 
 a.add-feedback {
-    /* margin: 0 20px; */
     color: #2b8aff;
     text-transform: uppercase;
     font-size: 10px;
-    /* display: none; */
     line-height: 20px;
 }
 
 .checkbox-container label:hover a.add-feedback {
     display: inline-block !important;
-}
-
-form.add-form {
-    /* position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -100%;
-    z-index: 100; */
 }
 
 .add-form textarea {
@@ -538,11 +427,6 @@ label:hover {
     border-radius: 50%;
     margin: 5px;
     border: 1px solid #2196F3;
-  }
-
-  /* On mouse-over, add a grey background color */
-  .radio-group:hover input ~ .checkmark {
-    /* background-color: #ccc; */
   }
 
   /* When the radio button is checked, add a blue background */
