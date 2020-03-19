@@ -1,4 +1,5 @@
 import {task, criteria} from "./criteria-list.js";
+
 import {render} from './renderView.js';
 
 window.onload = function(){
@@ -22,6 +23,5 @@ window.onload = function(){
             header.classList.remove("sticky");
           }
     }
-
     render(criteria);
 }

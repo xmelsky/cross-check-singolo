@@ -68,7 +68,7 @@ export const criteria = [
   },
   {
     type: 'penalty',
-    text: " Тестовый - Oшибки или предупреждения eslint-config-airbnb-base",
+    text: "Тестовый - Oшибки или предупреждения eslint-config-airbnb-base",
     max: -15
   }
 ]
